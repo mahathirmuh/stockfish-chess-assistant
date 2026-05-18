@@ -1,7 +1,7 @@
 <div align="center">
-  <img src="ressources/icon.png" alt="AI Chess Assistant" width="120" />
-  <h1>AI Chess Assistant</h1>
-  <p><strong>Chrome Extension for Real-Time Chess Position Analysis</strong></p>
+  <img src="ressources/icon.png" alt="Stockfish Chess Assistant" width="120" />
+  <h1>Stockfish Chess Assistant</h1>
+  <p><strong>Real-time chess position analyzer for the browser — Stockfish evaluations, visual move hints, and optional auto-play.</strong></p>
 
   <p>
     <a href="#features">Features</a> •
@@ -15,7 +15,7 @@
     <img src="https://img.shields.io/badge/TypeScript-5.4-blue?logo=typescript" alt="TypeScript" />
     <img src="https://img.shields.io/badge/Vite-5.2-purple?logo=vite" alt="Vite" />
     <img src="https://img.shields.io/badge/Chrome%20Extension-Manifest%20V3-green?logo=googlechrome" alt="Chrome Extension" />
-    <img src="https://github.com/nolancacheux/AI-Chess-Assistant/actions/workflows/ci.yml/badge.svg" alt="CI Status" />
+    <img src="https://github.com/mahathirmuh/stockfish-chess-assistant/actions/workflows/ci.yml/badge.svg" alt="CI Status" />
   </p>
 </div>
 
@@ -29,12 +29,13 @@
 
 ## Overview
 
-AI Chess Assistant is a Chrome extension that demonstrates **real-time chess engine integration** with web-based chess platforms. The extension leverages the **Stockfish chess engine** to analyze board positions, evaluate moves, and provide intelligent suggestions.
+Stockfish Chess Assistant is a Chrome extension that brings **real-time chess engine integration** to web-based chess platforms. The extension leverages the **Stockfish chess engine** to analyze board positions, evaluate moves, and optionally play moves on your behalf.
 
 This project showcases:
 - **Real-time position analysis** using WebWorker-based engine communication
 - **DOM manipulation** for board state extraction and move visualization
 - **Event-driven architecture** with TypeScript for type-safe development
+- **Optional auto-play** with randomized human-like response timing
 - **Modern build tooling** with Vite and automated CI/CD
 
 ## Features
@@ -65,6 +66,10 @@ Choose to analyze from White or Black's perspective, with the engine adapting it
 <div align="center">
   <img src="ressources/color-choose.png" alt="Color Selection" width="400" />
 </div>
+
+### Auto-Play (Optional)
+
+Toggle auto-play to let the engine execute the suggested move directly on the board. Each move is preceded by a **randomized "thinking" delay (0.5 – 2.5 seconds)** to mimic human response timing, and a built-in guard cancels the move if auto-play is disabled mid-delay.
 
 ## Architecture
 
@@ -122,8 +127,8 @@ src/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/nolancacheux/AI-Chess-Assistant.git
-   cd AI-Chess-Assistant
+   git clone https://github.com/mahathirmuh/stockfish-chess-assistant.git
+   cd stockfish-chess-assistant
    ```
 
 2. **Install dependencies**
@@ -141,7 +146,7 @@ src/
    - Navigate to `chrome://extensions/`
    - Enable **Developer Mode** (toggle in top-right corner)
    - Click **Load Unpacked**
-   - Select the `dist/` folder from this project (e.g., `AI-Chess-Assistant/dist/`)
+   - Select the `dist/` folder from this project (e.g., `stockfish-chess-assistant/dist/`)
 
 5. **Use the extension**
    - Go to [chess.com](https://chess.com)
@@ -167,7 +172,7 @@ npm run format
 ## Project Structure
 
 ```
-AI-Chess-Assistant/
+stockfish-chess-assistant/
 ├── .github/
 │   └── workflows/
 │       └── ci.yml          # GitHub Actions CI pipeline
@@ -234,5 +239,5 @@ MIT License - See [LICENSE](LICENSE) for details.
 ---
 
 <div align="center">
-  <p>Built by <a href="https://github.com/nolancacheux">Nolan Cacheux</a></p>
+  <p>Maintained by <a href="https://github.com/mahathirmuh">mahathirmuh</a> — originally created by <a href="https://github.com/nolancacheux">Nolan Cacheux</a></p>
 </div>
