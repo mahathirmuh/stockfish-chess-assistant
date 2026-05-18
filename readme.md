@@ -239,5 +239,5 @@ MIT License - See [LICENSE](LICENSE) for details.
 ---
 
 <div align="center">
-  <p>Maintained by <a href="https://github.com/mahathirmuh">mahathirmuh</a> — originally created by <a href="https://github.com/nolancacheux">Nolan Cacheux</a></p>
+  <p>Maintained by <a href="https://github.com/mahathirmuh">mahathirmuh</a>
 </div>
